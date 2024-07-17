@@ -1,0 +1,73 @@
+# https://www.funtoo.org/Funtoo:Keychain
+eval $(keychain --eval --quiet id_ed25519 id_ed25519_gh id_ed25519_arch)
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+export ZSH="$HOME/.oh-my-zsh"
+
+# '-' and '_' will be equivalent in completion eval
+HYPHEN_INSENSITIVE="true"           
+
+# Update reminders
+zstyle ':omz:update' mode reminder
+# How often to auto-update (in days)
+zstyle ':omz:update' frequency 10
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# TODO: Make sure this is still necessary...
+# Until oh-my-zsh allows multiple ZSH_CUSTOM folders, here's a workaround
+# Source: https://gist.github.com/elanora96/b2424fa9f70d7549fd0590c58949f686
+other_plugins_folders=("/usr/share/zsh/plugins" "$HOME/Projects/zsh-plugins")
+
+for dir in "${other_plugins_folders[@]}"; do
+  if [[ -d "$dir" ]]; then
+    for sdir in "$dir"/*; do
+      if [[ -d "$sdir" ]] && [[ ! -e "$ZSH/custom/plugins/$(basename "$sdir")" ]]; then
+        ln -s "$sdir" "$ZSH/custom/plugins"
+      fi
+    done
+  fi
+done
+
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+plugins=(git nix-shell calibre dolphin nmap)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# emacs
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
+# powerlevel10k
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
