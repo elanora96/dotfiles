@@ -25,7 +25,7 @@ local plugins = require("config.plugins")
 require("lazy").setup({
   spec = plugins,
   install = { colorscheme = { "gruvbox-material" } },
-  checker = { enabled = true },
+  checker = { enabled = false },
 })
 
 vim.cmd([[colorscheme gruvbox-material]])

@@ -7,6 +7,7 @@ return { {
       -- Show files and directories that start with "."
       show_hidden = true,
     },
+    watch_for_changes = true,
   },
   dependencies = { { "echasnovski/mini.icons", opts = {} } }
   -- dependencies = { "nvim-tree/nvim-web-devicons" }
@@ -60,7 +61,11 @@ return { {
       end)
 
       require("lazy-lsp").setup {
-        excluded_servers = { "rnix" },
+        excluded_servers = {
+          -- Problematic
+          "rnix", -- Appears unmaintained, shows errors
+          "basedpyright" -- 2024-07-29 Unsure where it is looking for python3, many false positives
+        },
       }
     end,
   },
