@@ -1,0 +1,42 @@
+{
+  "timeStamp": 1722613753445,
+  "version": "1.58.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "uiAccentCustom": true,
+    "uiAccentCustom0": "#689d6a",
+    "importedLists": [],
+    "popupPanelSections": 31
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-quick-fixes",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "adguard-spyware-url",
+    "urlhaus-1",
+    "plowe-0",
+    "fanboy-cookiemonster",
+    "ublock-cookies-easylist",
+    "fanboy-social",
+    "easylist-chat",
+    "easylist-newsletters",
+    "easylist-notifications",
+    "easylist-annoyances",
+    "ublock-annoyances"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "chrome-extension-scheme",
+    "moz-extension-scheme",
+    "trending.knowyourmeme.com"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "sjhsknights.com https://sjhsknights.com/wp-content/themes/bridge/js/plugins/smoothPageScroll.min.js script block",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
+  "userFilters": "! Jul 19, 2024 https://medium.com\nmedium.com##.afd.afc.afb.gh.afa.n.fr\n\n!Hacker News Dark Theme repost_src=https://news.ycombinator.com/item?id=41105747\nnews.ycombinator.com##body:style(color: #CCCCCC !important; background-color: #1A1A1A !important; )\nnews.ycombinator.com##table:style(background-color: #2B2B2B !important; )\nnews.ycombinator.com##input:style(background-color: #DFDFDF !important; )\nnews.ycombinator.com##table, tr, td, .pagetop, .score:style(color: #CCCCCC !important; )\nnews.ycombinator.com##td:style(border: 1px solid #2B2B2B !important; background-color: #2B2B2B !important; )\nnews.ycombinator.com##b:style(color: inherit !important; )\nnews.ycombinator.com##a, .c00:style(color: #eee !important; )\nnews.ycombinator.com##.c00 a:style(color: #318cd4 !important; )\nnews.ycombinator.com##.comhead, .subtext:style(color: #828282 !important; )\nnews.ycombinator.com##.comhead > a, .subtext > a:style(color: orange !important; )\nnews.ycombinator.com##.comhead font:style(color: #5a5a5a !important )\nnews.ycombinator.com##.c5a, .c88, .c9c:style(color: #999 !important; )\nnews.ycombinator.com##input:style(color: black !important; )\nnews.ycombinator.com##textarea:style(background-color: #E0E0E0 !important; border-left: 12px solid #CCCCCC !important; )\nnews.ycombinator.com##font[color=\"#000000\"]:style(color: #a3b72c !important; )"
+}
