@@ -1,0 +1,4 @@
+["Projects/zsh-plugins"]
+  type="git-repo"
+  url="https://github.com/elanora96/zsh-plugins.git"
+  refreshPeriod = "168h"

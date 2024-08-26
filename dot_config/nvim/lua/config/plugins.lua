@@ -63,8 +63,9 @@ return { {
       require("lazy-lsp").setup {
         excluded_servers = {
           -- Problematic
-          "rnix", -- Appears unmaintained, shows errors
-          "basedpyright" -- 2024-07-29 Unsure where it is looking for python3, many false positives
+          "rnix",         -- Appears unmaintained, shows errors
+          "basedpyright", -- 2024-07-29 Unsure where it is looking for python3, many false positives
+          "als",          -- Deprecation warning
         },
       }
     end,
@@ -94,6 +95,9 @@ return { {
       table.insert(config.sources, { name = "conjure" })
       return cmp.setup(config)
     end,
+  },
+  {
+    "lambdalisue/vim-suda",
   },
   {
     'sainnhe/gruvbox-material',
