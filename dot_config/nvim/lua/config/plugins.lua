@@ -1,17 +1,18 @@
 ---@diagnostic disable: undefined-global
-return { {
-  "stevearc/oil.nvim",
-  opts = {
-    -- See :help oil-actions for a list of all available actions
-    view_options = {
-      -- Show files and directories that start with "."
-      show_hidden = true,
+return {
+  {
+    "stevearc/oil.nvim",
+    opts = {
+      -- See :help oil-actions for a list of all available actions
+      view_options = {
+        -- Show files and directories that start with "."
+        show_hidden = true,
+      },
+      watch_for_changes = true,
     },
-    watch_for_changes = true,
+    dependencies = { { "echasnovski/mini.icons", opts = {} } }
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }
   },
-  dependencies = { { "echasnovski/mini.icons", opts = {} } }
-  -- dependencies = { "nvim-tree/nvim-web-devicons" }
-},
   {
     "wincent/command-t",
     build = "cd lua/wincent/commandt/lib && make",
@@ -53,7 +54,6 @@ return { {
       local lsp_zero = require("lsp-zero")
 
       lsp_zero.on_attach(function(_, bufnr)
-        -- see :help lsp-zero-keybindings to learn the available actions
         lsp_zero.default_keymaps({
           buffer = bufnr,
           preserve_mappings = false
@@ -62,10 +62,11 @@ return { {
 
       require("lazy-lsp").setup {
         excluded_servers = {
-          -- Problematic
-          "rnix",         -- Appears unmaintained, shows errors
-          "basedpyright", -- 2024-07-29 Unsure where it is looking for python3, many false positives
-          "als",          -- Deprecation warning
+          -- "als",         -- Deprecation warning
+          "ruff_lsp",
+          "bufls",
+          -- "bazelrc-lsp", -- Errors
+          -- "tsserver"     -- Deprecation warning
         },
       }
     end,
