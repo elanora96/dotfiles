@@ -27,7 +27,7 @@ for dir in "${other_plugins_folders[@]}"; do
   fi
 done
 
-plugins=(git nix-shell calibre dolphin nmap reflector paru pipx update poetry)
+plugins=(git nix-shell calibre dolphin nmap reflector paru pipx update poetry imagemagick)
 
 source $ZSH/oh-my-zsh.sh
 
