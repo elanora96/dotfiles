@@ -1,0 +1,51 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[plugins]
+
+# For example:
+#
+# [plugins.base16]
+# github = "chriskempson/base16-shell"
+
+[plugins.calibre]
+local = "~/Projects/zsh-plugins/calibre"
+
+[plugins.dolphin]
+local = "~/Projects/zsh-plugins/dolphin"
+
+[plugins.imagemagick]
+local = "~/Projects/zsh-plugins/imagemagick"
+
+[plugins.nmap]
+local = "~/Projects/zsh-plugins/nmap"
+
+[plugins.paru]
+local = "~/Projects/zsh-plugins/paru"
+
+[plugins.reflector]
+local = "~/Projects/zsh-plugins/reflector"
+
+[plugins.update]
+local = "~/Projects/zsh-plugins/update"
+
+[plugins.wget]
+local = "~/Projects/zsh-plugins/wget"
+
+[plugins.zsh-syntax-highlighting]
+git = "https://github.com/zsh-users/zsh-syntax-highlighting"
+
+[plugins.zsh-autosuggestions]
+git = "https://github.com/zsh-users/zsh-autosuggestions"
+
