@@ -1,9 +1,7 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
-  "cmp-conjure": { "branch": "master", "commit": "8c9a88efedc0e5bf3165baa6af8a407afe29daf6" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
   "command-t": { "branch": "main", "commit": "0a40e75eb6733938294fa0284fa836208856fee4" },
-  "conjure": { "branch": "master", "commit": "8aed42faf4cb44663d06883d9733c89180260daa" },
   "gruvbox-material": { "branch": "master", "commit": "66cfeb7050e081a746a62dd0400446433e802368" },
   "lazy-lsp.nvim": { "branch": "master", "commit": "15019ce6111ea3a13531b14820c430116de3048d" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
@@ -13,6 +11,5 @@
   "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
   "nvim-lspconfig": { "branch": "master", "commit": "4d3b3bb8815fbe37bcaf3dbdb12a22382bc11ebe" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
-  "oil.nvim": { "branch": "master", "commit": "bbad9a76b2617ce1221d49619e4e4b659b3c61fc" },
-  "vim-suda": { "branch": "master", "commit": "9adda7d195222d4e2854efb2a88005a120296c47" }
+  "oil.nvim": { "branch": "master", "commit": "bbad9a76b2617ce1221d49619e4e4b659b3c61fc" }
 }

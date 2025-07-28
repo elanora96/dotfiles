@@ -11,7 +11,6 @@ return {
       watch_for_changes = true,
     },
     dependencies = { { "echasnovski/mini.icons", opts = {} } }
-    -- dependencies = { "nvim-tree/nvim-web-devicons" }
   },
   {
     "wincent/command-t",
@@ -62,11 +61,8 @@ return {
 
       require("lazy-lsp").setup {
         excluded_servers = {
-          -- "als",         -- Deprecation warning
           "ruff_lsp",
           "bufls",
-          -- "bazelrc-lsp", -- Errors
-          -- "tsserver"     -- Deprecation warning
         },
       }
     end,
@@ -76,29 +72,6 @@ return {
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
-  },
-  {
-    "Olical/conjure",
-    ft = { "clojure" },
-    lazy = true,
-    init = function()
-      vim.g["conjure#debug"] = true
-    end,
-
-    dependencies = { "PaterJason/cmp-conjure" },
-  },
-  {
-    "PaterJason/cmp-conjure",
-    lazy = true,
-    config = function()
-      local cmp = require("cmp")
-      local config = cmp.get_config()
-      table.insert(config.sources, { name = "conjure" })
-      return cmp.setup(config)
-    end,
-  },
-  {
-    "lambdalisue/vim-suda",
   },
   {
     'sainnhe/gruvbox-material',
